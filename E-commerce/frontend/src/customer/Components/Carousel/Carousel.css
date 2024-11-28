@@ -1,0 +1,68 @@
+.carousel-container {
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  overflow: hidden;
+
+ 
+}
+
+.carousel-image {
+  width: 100%; /* Make images take full width of the container */
+
+  object-fit: cover;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+}
+  
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+  
+.slide {
+  flex: 1;
+  height: 50px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+  
+.slide.active {
+  opacity: 1;
+}
+  
+.slide.active ~ .slide {
+  transform: translateX(-100%);
+}
+  
+.indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+  
+.indicator {
+  height: 5px;
+  width: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+  
+.indicator.active {
+  background-color: #555;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
